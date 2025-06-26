@@ -1,7 +1,7 @@
 import requests
 from wb_parser.models import Product
 
-def parse_and_save_products(query: str, limit: int = 6) -> dict:
+def parse_and_save_products(query: str, limit: int = 10) -> dict:
     """parser for wb, using v13 search-queries"""
     # Указание местоположения (dest) обязательное, поставил свое
     url = f"https://search.wb.ru/exactmatch/ru/common/v13/search?query={query}&resultset=catalog&limit={limit}&dest=-1257786"
