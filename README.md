@@ -32,6 +32,6 @@ curl -X POST "http://127.0.0.1:8000/api/products/parse/?query=конфеты&lim
 
 Через Postman:
 
-![img_1.png](img_1.png)
+![image](https://github.com/user-attachments/assets/8daff85f-c11f-4e22-ac39-eb0126cce966)
 
 Если товара с таким id еще не существует, то создается новая запись, иначе обновляется существующая
