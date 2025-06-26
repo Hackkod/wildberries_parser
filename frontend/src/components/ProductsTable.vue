@@ -96,9 +96,9 @@ let discountVsRatingChart = null
 // Установка начального диапазона цен
 const setInitialPriceRange = async () => {
   try {
-    const response = await axios.get('http://localhost:8000/api/products/'); // Без фильтров
-    products.value = response.data;
-    const allProducts = response.data;
+    const response = await axios.get('http://localhost:8000/api/products/')
+    products.value = response.data
+    const allProducts = response.data
     if (allProducts.length > 0) {
       const prices = allProducts.map(product => product.price)
       minPrice.value = Math.min(...prices)
@@ -144,7 +144,7 @@ const updateCharts = () => {
       })
       const priceLabels = Object.keys(priceData).map(Number).sort((a, b) => a - b)
       const priceCounts = priceLabels.map(label => priceData[label])
-      const labelFormat = (label) => `${Math.round(label)}-${Math.round((label + priceStep))}`
+      const labelFormat = (label) => `${Math.round(label)}-${Math.round(label + priceStep)}`
 
       priceHistogram = new Chart(priceHistogramCanvas.value, {
         type: 'bar',
